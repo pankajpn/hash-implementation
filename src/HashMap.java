@@ -91,6 +91,7 @@ public class HashMap <K, V> {
                 put(node.key, node.value);
             }
         }
+        currSize = 0;
     }
 
     public void init(int size) {
