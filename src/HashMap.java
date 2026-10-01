@@ -86,12 +86,12 @@ public class HashMap <K, V> {
     public void reHash() {
         LinkedList<Node>[] oldBuckets = buckets;
         init(oldBuckets.length*2);
+        currSize = 0;
         for (LinkedList<Node> curr : oldBuckets) {
             for (Node node : curr) {
                 put(node.key, node.value);
             }
         }
-        currSize = 0;
     }
 
     public void init(int size) {
